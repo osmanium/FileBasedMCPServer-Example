@@ -28,3 +28,11 @@ file class EchoTool
     [McpServerTool(Name = "echo"), Description("Echoes the message back to the client.")]
     public static string Echo([Description("The message to echo back.")] string message) => $"Echo: {message}";
 }
+
+
+[McpServerToolType]
+file class RandomTool
+{
+    [McpServerTool(Name = "get_random_guid"), Description("Prints random guid to the client.")]
+    public static string GetRandomGuid() => Guid.NewGuid().ToString();
+}
