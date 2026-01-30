@@ -12,7 +12,8 @@ var builder = Host.CreateApplicationBuilder(args);
 
 builder.Services.AddMcpServer()
     .WithStdioServerTransport()
-    .WithTools<EchoTool>();
+    .WithTools<EchoTool>()
+    .WithTools<RandomTool>();
 
 builder.Logging.AddConsole(options =>
 {
